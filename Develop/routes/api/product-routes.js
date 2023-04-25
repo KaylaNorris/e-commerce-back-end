@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
       include: [Category, Tag]
 });
     if (Product) {
-      res.json(Product);
+      res.json(product);
     } else {
       res.status(404).json({ message: 'Product not found. Please check id.' });
     }
