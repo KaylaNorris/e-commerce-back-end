@@ -7,7 +7,10 @@ router.get('/', async (req, res) => {
   // find all tags
   try {
     const tags = await Tag.findAll({
-      include: [Product],
+      include: [{
+        model: Product,
+        attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
+      }]
     });
     res.status(200).json(tags);
   } catch (err) {
@@ -21,7 +24,10 @@ router.get('/:id', async (req, res) => {
   try {
     const tag = await Tag.findOne({
       where: { id },
-      include: [Product]
+      include: [{
+        model: Product,
+        attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
+      }]
     });
     if (Tag) {
       res.json(tag);
@@ -68,7 +74,7 @@ router.delete('/:id', async (req, res) => {
     const tagData = await Tag.destroy({
       where: {
         id: req.params.id,
-    },
+      },
   });
   if (!tagData) { 
     res.status(404).json({ message: 'No tag with this id.' });

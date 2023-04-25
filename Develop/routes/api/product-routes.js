@@ -24,7 +24,7 @@ router.get('/:id', async (req, res) => {
     const product = await Product.findOne({
       where: { id },
       include: [Category, Tag]
-    });
+});
     if (Product) {
       res.json(Product);
     } else {
