@@ -17,7 +17,7 @@ Tag.init(
     },
     product_name: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
     }
   },
   {
