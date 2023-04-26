@@ -33,7 +33,7 @@ Once you have the previous steps completed, open Insomnia. Use GET, POST, PUT an
 ## Insomnia Example
 ![Screenshot 1](images/e-commerce-screenshot.jpg)
 ## Demonstration Video
-[Click here to view video!](https://www.youtube.com/watch?v=Y_HPaRmcfLo)
+[Click here to view video!](https://youtu.be/H8LEibXm5D4)
 
 
 
